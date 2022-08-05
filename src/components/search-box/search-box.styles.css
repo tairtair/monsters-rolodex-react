@@ -1,0 +1,13 @@
+.search-box {
+  width: 150px;
+  padding: 24px;
+  font-size: 16px;
+  color: #3c474b;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  /* background: #4f928c;
+  box-shadow: inset 11px 11px 21px #437c77, inset -11px -11px 21px #5ba8a1; */
+  background: #dadada;
+  box-shadow: inset 11px 11px 21px #b9b9b9, inset -11px -11px 21px #efefef;
+}

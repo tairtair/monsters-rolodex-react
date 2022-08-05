@@ -1,0 +1,19 @@
+.card-container {
+  padding: 20px 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transition: all ease 0.3s;
+}
+.card-container:hover {
+  transform: translateY(-5px);
+}
+.card-container h2 {
+  /* color: #b3283b; */
+  /* color: #495b6e; */
+  color: #3d0000;
+  font-size: 18px;
+}
+.card-container p {
+  font-size: 20px;
+  font-family: "Waiting for the Sunrise", cursive;
+}
