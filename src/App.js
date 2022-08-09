@@ -6,13 +6,11 @@ import { useEffect, useState } from "react";
 function App() {
   const [searchField, setSearchField] = useState("");
   const [monsters, setMonsters] = useState([]);
+  const [filteredMonsters, setFilteredMosters] = useState(monsters);
   const onSearchChange = (e) => {
     const searchFieldString = e.target.value.toLowerCase();
     setSearchField(searchFieldString);
   };
-  const filteredMonsters = monsters.filter((monster) =>
-    monster.name.toLowerCase().includes(searchField)
-  );
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,7 +24,13 @@ function App() {
       }
     };
     fetchData();
-  });
+  }, []);
+  useEffect(() => {
+    const newFilteredMonsters = monsters.filter((monster) =>
+      monster.name.toLowerCase().includes(searchField)
+    );
+    setFilteredMosters(newFilteredMonsters);
+  }, [monsters, searchField]);
   return (
     <div className="App">
       <h1 className="app-title">Monsters Rolodex</h1>
